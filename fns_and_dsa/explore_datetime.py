@@ -1,14 +1,14 @@
 import datetime
 from datetime import timedelta
 
-year = datetime.datetime.now().year
-month = datetime.datetime.now().month
-day = datetime.datetime.now().day
-hour = datetime.datetime.now().hour
-minute = datetime.datetime.now().minute
-second = datetime.datetime.now().second
-
+current_date = datetime.datetime.now()
 
 def display_current_datetime():
-  print(f"{year}-{month}-{day} {hour}:{minute}:{second}")
+    print("Current date and time:", current_date.strftime("%Y-%m-%d %H:%M:%S"))
 
+display_current_datetime()
+def calculate_future_date():
+  future_date = current_date + timedelta(days=int(input("Enter days to add: ")))
+  print(future_date)
+
+calculate_future_date()
