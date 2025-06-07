@@ -9,18 +9,18 @@ def main():
     shopping_list = []
     while True:
         display_menu()
-        choice = input("Enter your choice: ")
+        choice = int(input("Enter your choice: "))
 
-        if choice == '1':
+        if choice == 1:
             shopping_list.append(input("Enter The object you want to add: "))
             pass
-        elif choice == '2':
+        elif choice == 2:
             shopping_list.remove(input("Enter The object you want to remove: "))
             pass
-        elif choice == '3':
+        elif choice == 3:
             print(shopping_list)
             pass
-        elif choice == '4':
+        elif choice == 4:
             print("Goodbye!")
             break
         else:
@@ -28,4 +28,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-print(main())
+
+main()
